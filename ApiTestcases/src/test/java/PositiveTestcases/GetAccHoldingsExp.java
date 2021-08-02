@@ -11,7 +11,7 @@ public class GetAccHoldingsExp {
 	@Test(groups = "positiveTestcases")
 	public void ValidateGetAccHoldingsExp(){
 	
-	RestAssured.baseURI = "";
+	RestAssured.baseURI = " ";
 	
 	given().log().all().queryParam("uuid", "").queryParam("date", "").queryParam("filter", "").header("Authorization", "Bearer " + "token").
 			when().get("account/{uuid}/holdings/export").
