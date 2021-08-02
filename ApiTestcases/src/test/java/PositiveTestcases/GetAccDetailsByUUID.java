@@ -11,7 +11,7 @@ public class GetAccDetailsByUUID {
 	@Test(groups = "positiveTestcases")
 	public void Validate_AccDetailsByUUID(){
 	
-	RestAssured.baseURI = "  ";
+	RestAssured.baseURI = "";
 	
 	given().log().all().queryParam("uuid", "").header("Authorization", "Bearer " + "token").
 			when().get("account").
